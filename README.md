@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🧠 AI Study Explainer
 
-## Getting Started
+Turn complex text into simple, structured explanations using AI
 
-First, run the development server:
+🌐 Live Demo:
+https://ai-study-explainer-git-main-notaaronjoses-projects.vercel.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🚀 Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+AI Study Explainer is an AI-powered web application that simplifies long, complex text into clear and structured explanations.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+It leverages transformer-based models to help students, developers, and researchers quickly understand large amounts of information with minimal effort.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+✨ Features
+📄 Smart Text Summarization
+Converts lengthy content into concise explanations
+🧾 Bullet Point Mode
+Breaks down summaries into easy-to-read key points
+📌 Auto Title Generation
+Generates a meaningful title for any input
+⚡ Handles Large Text (Chunking)
+Processes long inputs without losing information
+🎛️ Multiple Modes
+Short
+Balanced
+Detailed
+🧹 Text Cleaning Engine
+Removes links, noise, and unnecessary formatting
+🛠️ Tech Stack
+Frontend: Streamlit
+Backend: Python
+AI Model: facebook/bart-large-cnn (Hugging Face Transformers)
+Libraries: transformers, torch, regex
+Deployment: Vercel + Ngrok
+⚙️ How It Works
+User pastes input text
+Text is cleaned and preprocessed
+Large text is split into chunks
+Each chunk is summarized using the AI model
+Results are combined and refined
+Final output:
+Generated title
+Bullet points or paragraph summary
+🧪 Example
 
-## Learn More
+Input:
+Long technical content (500+ words)
 
-To learn more about Next.js, take a look at the following resources:
+Output:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Key bullet points
+Concise explanation
+Auto-generated title
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+📊 Reduces reading time by ~70–80%
 
-## Deploy on Vercel
+🚀 Installation & Setup
+1. Clone the repository
+git clone https://github.com/NOTAaronjose/ai-study-explainer.git
+cd ai-study-explainer
+2. Install dependencies
+pip install transformers torch streamlit sentencepiece rouge-score pyngrok
+3. Run the app
+streamlit run app.py
+🌍 Run on Google Colab
+!pip install streamlit pyngrok transformers torch
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+from pyngrok import ngrok
+ngrok.set_auth_token("YOUR_TOKEN")
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+!streamlit run app.py &
+
+public_url = ngrok.connect(8501)
+print(public_url)
+
+⚠️ Important:
+Never commit your ngrok token to GitHub.
+
+🎯 Use Cases
+📚 Study & revision
+🧪 Research papers
+📰 Articles & blogs
+💼 Productivity workflows
+🔮 Future Improvements
+📂 PDF / DOCX upload
+🧠 Flashcard generation
+🎙️ “Explain Like I’m 10” mode
+🌙 Dark mode UI
+⚡ Faster models
+👨‍💻 Author
+
+Aaron Jose Fernandez
+
+GitHub: https://github.com/NOTAaronjose
+LinkedIn: https://www.linkedin.com/in/aaron-jose-2aa1b8338/
+⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
+
+🚀 Push it now
+git add README.md
+git commit -m "Updated README for AI Study Explainer"
+git push origin main
