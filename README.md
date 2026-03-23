@@ -1,3 +1,6 @@
+## 🚀 Demo
+![App Screenshot](screenshot.png)
+
 🧠 AI Study Explainer
 
 Turn complex text into simple, structured explanations using AI
